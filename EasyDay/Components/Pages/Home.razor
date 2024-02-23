@@ -1,7 +1,14 @@
 ﻿@page "/"
+@using MD.PersianDateTime
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>تاریخ و ساعت امروز:</h1>
+<h3>@dateTimeIR</h3>
 
-Welcome to your new app.
+
+@code
+{
+
+    string dateTimeIR = new PersianDateTime(DateTime.Now).ToLongDateTimeString();
+}
